@@ -3,7 +3,7 @@ import json
 def test_balance(app, client):
     del app
     res = client.get('/')
-    assert res.status_code == 100
+    assert res.status_code == 200
     expected = {'balance': 0}
     assert expected == json.loads(res.get_data(as_text=True))
 
